@@ -18,27 +18,27 @@
         <!-- ------------------------------ header ----------------------------- -->
 
 
-        <!-- header of lg -->
-        <div class="col-3 d-none d-sm-block col-lg-3 flex-row-reverse menu">
+        <!-- header of md -->
+        <div class="col-3 d-none d-sm-block col-md-4 flex-row-reverse menu">
 
             <div class="col-12 d-flex align-items-center justify-content-center flex-column mt-5">
                 <img class="my-auto m-5 img_logo" src="./dist/image/icon/logo.svg" alt="">
 
-                <div  class="mt-4">
+                <div class="mt-4 position-relative">
                     <div class="Primary bg_button_1  position-absolute button_menu"> 
                     </div>
-                    <button  class="opinion_1 button_menu position-relative border-0 tx_White d-flex justify-content-around align-items-center" style="background-color: transparent;">
+                    <button class="opinion_1 button_menu position-relative border-0 tx_White d-flex justify-content-around align-items-center" style="background-color: transparent;">
                         1نظرسنجی
-                        <img src="./dist/image/icon/notebook_select.svg" alt="">
+                        <img id ="note-button" src="./dist/image/icon/notebook_select.svg" height=30 width=30>
                     </button>
                     
                 </div>
-                <div class="mt-4" > 
-                    <div class="Primary bg_button_2  position-absolute button_menu"> 
+                <div class="mt-4 position-relative" > 
+                    <div class="Primary bg_thin bg_button_2  position-absolute button_menu"> 
                     </div>
-                    <button class="opinion_2 button_menu tx_black position-relative border-0 tx_White d-flex justify-content-around align-items-center" style="background-color: transparent;">
+                    <button  class="opinion_2 button_menu tx_black position-relative border-0 tx_White d-flex justify-content-around align-items-center" style="background-color: transparent;">
                          2نظرسنجی
-                        <img src="./dist/image/icon/Opinion_d_select.svg" alt="">
+                         <img id ="opinion-button" src="./dist/image/icon/Opinion_d_select.svg" height=30 width=30>                  
                     </button>
                     
                 </div>
@@ -49,7 +49,7 @@
 
         <!-- header of sm -->
 
-        <div class="col-12 col-lg-8"style="height: 100vh;">
+        <div class="col-12 col-md-8"style="height: 100vh;">
             <!-- header of opinion -->
             <div class="col-12">
                 <div class="d-flex m-2 justify-content-between align-items-center">
@@ -83,21 +83,16 @@
                                 </div>
                                 <button class="opinion_1 button_menu position-relative border-0 tx_White d-flex justify-content-around align-items-center" style="background-color: transparent;">
                                     1نظرسنجی
-                                    <label class="tog">
-                                        <input type="checkbox" checked>
-                                        <span></span>
-                                  </label>
+                                    <img id ="note-button" src="./dist/image/icon/notebook_select.svg" height=30 width=30>
                                 </button>
                                 
                             </div>
                             <div class="mt-4 position-relative" > 
-                                <div class="Primary bg_button_2  position-absolute button_menu"> 
+                                <div class="Primary bg_thin bg_button_2  position-absolute button_menu"> 
                                 </div>
                                 <button  class="opinion_2 button_menu tx_black position-relative border-0 tx_White d-flex justify-content-around align-items-center" style="background-color: transparent;">
                                      2نظرسنجی
-                                    <label class="tog">
-                                        <input type="checkbox" checked>
-                                  </label>                                
+                                     <img id ="opinion-button" src="./dist/image/icon/Opinion_d_select.svg" height=30 width=30>                  
                                 </button>
                                 
                             </div>
@@ -126,34 +121,58 @@
     location.hash ="opinion_1";
 
 $(".opinion_1").click( function() {   
-// alert("boz")
-    location.hash ="opinion_1";
-    // $(".bg_button_1").removeClass("bg_thin");
-    // $(".bg_button_1").removeClass("bg_fat");
+    if (location.hash == "#opinion_1") {
+        // alert("d");
+    }else{
     $(".bg_button_1").toggleClass("bg_thin");
-    $(".bg_button_1").toggleClass("bg_fat");
+    $(".opinion_1").toggleClass("tx_White");
+    $(".bg_button_2").toggleClass("bg_fat");
+    $(".opinion_2").toggleClass("tx_black");
+    img_1();
+    img_2();
+    }
+    location.hash ="opinion_1";
 
-    // $(".bg_button_1").toggleClass("tx_black");
-        // alert("d")
-    // $(".bg_button_2").removeClass("bg_fat");
-    // $(".bg_button_2").removeClass("bg_thin");
-    // $(".bg_button_2").toggleClass("bg_fat");
-    
+
 });
 $(".opinion_2").click(function() {    
+    if (location.hash == "#opinion_2") {
+        // alert("3d");
+    }else{
+        $(".bg_button_1").toggleClass("bg_thin");
+    $(".opinion_1").toggleClass("tx_White");
+    $(".bg_button_2").toggleClass("bg_fat");
+    $(".opinion_2").toggleClass("tx_black");
+    }
     location.hash ="opinion_2";
-    // $(".bg_button_1").removeClass("bg_thin");
-    // $(".bg_button_1").removeClass("bg_fat");
 
-    // $(".bg_button_1").addClass("bg_thin");
-
-    // $(".bg_button_2").removeClass("bg_fat");
-    // $(".bg_button_2").removeClass("bg_thin");
-
-    // $(".bg_button_2").addClass("bg_fat");
-
-    // window.location ="./opainion_2.html";
+    img_2();
+    img_1();
 
 });
+
+function img_2(){
+const image_2 = $("img#opinion-button");
+  const img1_src = "./dist/image/icon/opinion_select.svg";
+  const img2_src = "./dist/image/icon/opinion_d_select.svg";
+		
+  if (image_2.attr("src") == img1_src) {
+			image_2.attr("src", img2_src);
+		} else {
+			image_2.attr("src", img1_src);
+    }
+}
+function img_1(){
+    const image_1 = $("img#note-button");
+  const img1_src = "./dist/image/icon/notebook_select.svg";
+  const img2_src = "./dist/image/icon/notebook_d_select.svg";
+		
+  if (image_1.attr("src") == img1_src) {
+      
+			image_1.attr("src", img2_src);
+		} else {
+			image_1.attr("src", img1_src);
+    }
+}
 </script>
 </html>
