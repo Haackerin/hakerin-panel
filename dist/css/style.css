@@ -28,22 +28,34 @@ height:3.5rem;
     right: 0px;
 
 }
-/* .thin{
-
+.opinion_1{
+    position: relative;
 }
-.thin .button_menu{
-    
-} */
-#opinion_1{
+.opinion_2{
     position: relative;
 }
 .bg_fat{
     width: 13.25rem !important;
     /* transition: 1s ease-in-out; */
 }
-.bg_button_2{
-    transition: 2s ease-in;
-}
+
+
+label.tog > input {
+    display: none; /* Hide the checkbox */
+  }
+  
+  label.tog > input + span {
+    text-indent: -9000px; /* Make text Accessible but not visible */
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background: center / contain no-repeat url("./dist/image/icon/notebook_select.svg"); /*Play*/
+  }
+  
+  label.tog > input:checked + span {
+    background-image: url("./dist/image/icon/notebook_d_select.svg"); /*Pause*/
+  }
+
 
 
 

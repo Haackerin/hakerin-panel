@@ -13,27 +13,30 @@
 </head>
 <body>
 
-    <div class="d-flex overflow-hidden flex-lg-row-reverse">
-
+    <div class="d-flex overflow-hidden flex-sm-row-reverse">
         
-        <!-- <div class="col-5 col-lg-3 flex-row-reverse  menu">
+        <!-- ------------------------------ header ----------------------------- -->
+
+
+        <!-- header of lg -->
+        <div class="col-3 d-none d-sm-block col-lg-3 flex-row-reverse menu">
 
             <div class="col-12 d-flex align-items-center justify-content-center flex-column mt-5">
                 <img class="my-auto m-5 img_logo" src="./dist/image/icon/logo.svg" alt="">
 
-                <div id="opinion_1" class="mt-4">
+                <div  class="mt-4">
                     <div class="Primary bg_button_1  position-absolute button_menu"> 
                     </div>
-                    <button  class="button_menu position-relative border-0 tx_White d-flex justify-content-around align-items-center" style="background-color: transparent;">
+                    <button  class="opinion_1 button_menu position-relative border-0 tx_White d-flex justify-content-around align-items-center" style="background-color: transparent;">
                         1نظرسنجی
                         <img src="./dist/image/icon/notebook_select.svg" alt="">
                     </button>
                     
                 </div>
-                <div class="mt-4" id="opinion_2"> 
+                <div class="mt-4" > 
                     <div class="Primary bg_button_2  position-absolute button_menu"> 
                     </div>
-                    <button  class="button_menu tx_black position-relative border-0 tx_White d-flex justify-content-around align-items-center" style="background-color: transparent;">
+                    <button class="opinion_2 button_menu tx_black position-relative border-0 tx_White d-flex justify-content-around align-items-center" style="background-color: transparent;">
                          2نظرسنجی
                         <img src="./dist/image/icon/Opinion_d_select.svg" alt="">
                     </button>
@@ -42,29 +45,30 @@
 
             </div>
            
-        </div> -->
+        </div>
 
+        <!-- header of sm -->
 
         <div class="col-12 col-lg-8"style="height: 100vh;">
+            <!-- header of opinion -->
             <div class="col-12">
                 <div class="d-flex m-2 justify-content-between align-items-center">
                     <div class="d-flex">
                         <div class="div_logo Primary ms-2">
                             <img src="./dist/image/icon/Long T-Shirt Boy_3d 1.png" alt="">
                         </div>
-                        <span class="ms-2 d-none d-sm-inline">امیرعلی اسحاقی</span>
+                        <span class="ms-2 d-none d-sm-flex align-items-center">امیرعلی اسحاقی</span>
                         
                         <img src="./dist/image/icon/bell.svg" alt="">
                     </div>
-                    <div  type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">
+                    <div class="d-inline d-sm-none"  type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">
                         <img src="./dist/image/icon/Hamburger Menu.svg"style="width: 2.5rem;" alt="">
                     </div>
 
                     <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
                       <div class="offcanvas-header">
-                        <!-- <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">Backdrop with scrolling</h5> -->
                         <div class="col-12 d-flex flex-row-reverse">
-                            <img src="./dist/image/icon/Close Circle.svg" type="button"  data-bs-dismiss="offcanvas" aria-label="Close" alt="">
+                            <img src="./dist/image/icon/Close Circle.svg"style="width: 2.5rem;" type="button"  data-bs-dismiss="offcanvas" aria-label="Close" alt="">
                         </div>
                       </div>
                       <div class="offcanvas-body">
@@ -74,21 +78,26 @@
 
                         <div class="col-12 d-flex align-items-center justify-content-center flex-column mt-5">
             
-                            <div id="opinion_1" class="mt-4">
+                            <div class="mt-4 position-relative">
                                 <div class="Primary bg_button_1  position-absolute button_menu"> 
                                 </div>
-                                <button  class="button_menu position-relative border-0 tx_White d-flex justify-content-around align-items-center" style="background-color: transparent;">
+                                <button class="opinion_1 button_menu position-relative border-0 tx_White d-flex justify-content-around align-items-center" style="background-color: transparent;">
                                     1نظرسنجی
-                                    <img src="./dist/image/icon/notebook_select.svg" alt="">
+                                    <label class="tog">
+                                        <input type="checkbox" checked>
+                                        <span></span>
+                                  </label>
                                 </button>
                                 
                             </div>
-                            <div class="mt-4" id="opinion_2"> 
+                            <div class="mt-4 position-relative" > 
                                 <div class="Primary bg_button_2  position-absolute button_menu"> 
                                 </div>
-                                <button  class="button_menu tx_black position-relative border-0 tx_White d-flex justify-content-around align-items-center" style="background-color: transparent;">
+                                <button  class="opinion_2 button_menu tx_black position-relative border-0 tx_White d-flex justify-content-around align-items-center" style="background-color: transparent;">
                                      2نظرسنجی
-                                    <img src="./dist/image/icon/Opinion_d_select.svg" alt="">
+                                    <label class="tog">
+                                        <input type="checkbox" checked>
+                                  </label>                                
                                 </button>
                                 
                             </div>
@@ -96,23 +105,15 @@
                         </div>
                       </div>
                     </div>
-
-
                 </div>
             </div>
-            <div class="col-12 p-3">
-                    <p class="text-start titel_opinion col-12 p-1">موضوع: لورم ایپسوم</p>
-                    <p class="text-start discription_opinion col-12 p-1">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است</p>
-             <div class="col-12 d-flex justify-content-center">
-                <textarea class="texterea my-2" name="" id="" cols="60" rows="6"></textarea>
+            <div class="box_opinion">
 
-             </div>
-
-                <button class="send_opinian Primary tx_White border-0 mt-4">
-                    ثبت نظر
-                </button>
             </div>
+
         </div>
+
+
     </div>
 
     
@@ -121,20 +122,26 @@
 <script src="./dist/js/jquery-3.6.1.js"></script>
 <script src="./dist/js/function.js"></script>
 <script>
-//     $("#opinion_1").click( function() {    
-//     // location.hash ="map";
-//     // $(".bg_button_1").removeClass("bg_thin");
-//     // $(".bg_button_1").removeClass("bg_fat");
-//     $(".bg_button_1").toggleClass("bg_thin");
-//     $(".bg_button_1").toggleClass("tx_black");
-//         // alert("d")
-//     // $(".bg_button_2").removeClass("bg_fat");
-//     // $(".bg_button_2").removeClass("bg_thin");
-//     $(".bg_button_2").toggleClass("bg_fat");
 
-// });
-$("#opinion_2").click(function() {    
-    // location.hash ="map";
+    location.hash ="opinion_1";
+
+$(".opinion_1").click( function() {   
+// alert("boz")
+    location.hash ="opinion_1";
+    // $(".bg_button_1").removeClass("bg_thin");
+    // $(".bg_button_1").removeClass("bg_fat");
+    $(".bg_button_1").toggleClass("bg_thin");
+    $(".bg_button_1").toggleClass("bg_fat");
+
+    // $(".bg_button_1").toggleClass("tx_black");
+        // alert("d")
+    // $(".bg_button_2").removeClass("bg_fat");
+    // $(".bg_button_2").removeClass("bg_thin");
+    // $(".bg_button_2").toggleClass("bg_fat");
+    
+});
+$(".opinion_2").click(function() {    
+    location.hash ="opinion_2";
     // $(".bg_button_1").removeClass("bg_thin");
     // $(".bg_button_1").removeClass("bg_fat");
 
@@ -145,7 +152,7 @@ $("#opinion_2").click(function() {
 
     // $(".bg_button_2").addClass("bg_fat");
 
-    window.location ="./opainion_2.html";
+    // window.location ="./opainion_2.html";
 
 });
 </script>

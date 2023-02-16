@@ -28,10 +28,15 @@ $(window).on('hashchange', function(){
      
     // Your code goes here
     var hash = location.hash;
-    if (hash == "#map") {
-        $(".page").load("./map.html");
+    if (hash == "#opinion_1") {
+        $(".box_opinion").load("./opinion_1.html");
         // active_menu("map");
     }
+    if (hash == "#opinion_2") {
+        $(".box_opinion").load("./opinion_2.html");
+        // active_menu("map");
+    }
+    console.log("box");
    
 }).trigger('hashchange');
 
