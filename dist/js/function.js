@@ -14,14 +14,13 @@
 //         },1000); 
 // }
 
-$("#home").click(function() {
-        location.hash ="home";
+// $("#home").click(function() {
+//         location.hash ="home";
         
-});
-$("#map").click(function() {    
-        location.hash ="map";
-});
-
+// });
+// $("#map").click(function() {    
+//         location.hash ="map";
+// });
 
 // 
 
