@@ -19,7 +19,7 @@
 
 
         <!-- header of md -->
-        <div class="col-3 d-none d-sm-block col-md-4 flex-row-reverse menu">
+        <div class="col-3 d-none d-md-block col-md-4 col-lg-3 flex-row-reverse menu">
 
             <div class="col-12 d-flex align-items-center justify-content-center flex-column mt-5">
                 <img class="my-auto m-5 img_logo" src="./dist/image/icon/logo.svg" alt="">
@@ -49,19 +49,19 @@
 
         <!-- header of sm -->
 
-        <div class="col-12 col-md-8"style="height: 100vh;">
+        <div class="col-12 col-md-8 col-lg-9 p-4"style="height: 100vh;">
             <!-- header of opinion -->
-            <div class="col-12">
-                <div class="d-flex m-2 justify-content-between align-items-center">
+            <div class="col-12 ">
+                <div class="d-flex m-2  justify-content-between align-items-center">
                     <div class="d-flex">
                         <div class="div_logo Primary ms-2">
                             <img src="./dist/image/icon/Long T-Shirt Boy_3d 1.png" alt="">
                         </div>
-                        <span class="ms-2 d-none d-sm-flex align-items-center">امیرعلی اسحاقی</span>
+                        <span class="ms-2 d-none d-md-flex align-items-center name_header">امیرعلی اسحاقی</span>
                         
                         <img src="./dist/image/icon/bell.svg" alt="">
                     </div>
-                    <div class="d-inline d-sm-none"  type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">
+                    <div class="d-inline d-md-none"  type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">
                         <img src="./dist/image/icon/Hamburger Menu.svg"style="width: 2.5rem;" alt="">
                     </div>
 
@@ -90,7 +90,7 @@
                             <div class="mt-4 position-relative" > 
                                 <div class="Primary bg_thin bg_button_2  position-absolute button_menu"> 
                                 </div>
-                                <button  class="opinion_2 button_menu tx_black position-relative border-0 tx_White d-flex justify-content-around align-items-center" style="background-color: transparent;">
+                                <button data-ripple-light="true" class="opinion_2 button_menu tx_black position-relative border-0 tx_White d-flex justify-content-around align-items-center" style="background-color: transparent;">
                                      2نظرسنجی
                                      <img id ="opinion-button" src="./dist/image/icon/Opinion_d_select.svg" height=30 width=30>                  
                                 </button>
@@ -113,6 +113,8 @@
 
     
 </body>
+
+<script src="./dist/css/materail_ripley.js"></script>
 <script src="./dist/css/bootstrap/js/bootstrap.bundle.min.js"></script>
 <script src="./dist/js/jquery-3.6.1.js"></script>
 <script src="./dist/js/function.js"></script>
@@ -143,11 +145,13 @@ $(".opinion_2").click(function() {
     $(".opinion_1").toggleClass("tx_White");
     $(".bg_button_2").toggleClass("bg_fat");
     $(".opinion_2").toggleClass("tx_black");
-    }
-    location.hash ="opinion_2";
 
     img_2();
     img_1();
+    }
+    location.hash ="opinion_2";
+
+
 
 });
 

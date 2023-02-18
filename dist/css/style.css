@@ -1,7 +1,48 @@
-/* @font-face {
-    font-family: "heavy";
-    src: url(../font/yekan\ bakh\ en\ 07\ heavy.ttf);
-} */
+@font-face {
+    font-family: "Dana-FaNum";
+    src: url(../font/Dana/Dana-FaNum-Thin.ttf);
+    font-weight: 100;
+}
+@font-face {
+    font-family: "Dana-FaNum";
+    src: url(../font/Dana/Dana-FaNum-ExtraLight.ttf);
+    font-weight:200;
+}
+@font-face {
+    font-family: "Dana-FaNum";
+    src: url(../font/Dana/Dana-FaNum-Light.ttf);
+    font-weight: 300;
+}
+@font-face {
+    font-family: "Dana-FaNum";
+    src: url(../font/Dana/Dana-FaNum-Regular.ttf);
+    font-weight: 400;
+}
+@font-face {
+    font-family: "Dana-FaNum";
+    src: url(../font/Dana/Dana-FaNum-Medium.ttf);
+    font-weight: 500;
+}
+@font-face {
+    font-family: "Dana-FaNum";
+    src: url(../font/Dana/Dana-FaNum-DemiBold.ttf);
+    font-weight: 600;
+}
+@font-face {
+    font-family: "Dana-FaNum";
+    src: url(../font/Dana/Dana-FaNum-Bold.ttf);
+    font-weight: 700;
+}
+@font-face {
+    font-family: "Dana-FaNum";
+    src: url(../font/Dana/Dana-FaNum-ExtraBold.ttf);
+    font-weight: 800;
+}
+@font-face {
+    font-family: "Dana-FaNum";
+    src: url(../font/Dana/Dana-FaNum-Black.ttf);
+    font-weight: 900;
+}
 .tx_White{
     color: #FAFEFD;
 }
@@ -18,18 +59,18 @@
 /*------------------------------------- styles Dashbord -------------------------------------*/
 .img_logo{
     width: 12.5rem;
-height:3.5rem;
+    height:3.5rem;
 }
 .bg_thin{
     width: 4px !important;
-    transition: 1s ease-in-out;
+    transition: 0.6s ease-in-out;
     /* right:0.85rem; */
     position: absolute;
     right: 0px;
 
 }
-.bg_thin:hover{
-    padding: 1rem;
+.opinion_1:hover.bg_thin{
+    background: blue !important;
 }
 .opinion_1{
     position: relative;
@@ -39,7 +80,13 @@ height:3.5rem;
 }
 .bg_fat{
     width: 13.25rem !important;
-    transition: 1s ease-in-out;
+    transition: 0.6s ease-in-out;
+    position: absolute;
+    right: 0px;
+}
+.opinion_1,.opinion_2:hover .bg_button_2 , .bg_button_1{
+    /* height: 3px !important; */
+    transition: 0.6s ease-in-out;
     position: absolute;
     right: 0px;
 }
@@ -99,10 +146,10 @@ font-size:1rem;
 line-height: 50px;
 text-align: center;
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (min-width: 600px) {
     .send_opinian{
-        width: 23.5rem !important;
-        height: 4.5rem !important;
+        width: 16.5rem !important;
+        height: 3.5rem !important;
     }
 }
 .button_menu{
@@ -121,5 +168,11 @@ align-items: center;
 text-align: right;
 text-transform: uppercase;
 }
-
+.name_header{
+    font-family: 'Dana-FaNum';
+font-style: normal;
+font-weight: 400;
+font-size: 1.1rem;
+line-height: 20px;
+}
 /*------------------------------------- styles Login -------------------------------------*/
