@@ -176,3 +176,24 @@ font-size: 1.1rem;
 line-height: 20px;
 }
 /*------------------------------------- styles Login -------------------------------------*/
+.enter_to_account_titel{
+font-family: 'Dana-FaNum';
+font-style: normal;
+font-weight: 800;
+font-size: 2.5rem;
+line-height: 63px;
+}
+label{    
+font-family: 'Dana-FaNum';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 25px;
+}
+.button_titel{
+font-family: 'Dana-FaNum';
+font-style: normal;
+font-weight: 600;
+font-size:1.5rem;
+line-height: 50px;
+}
